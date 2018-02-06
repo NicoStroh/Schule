@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String [] args) {
+		Scanner ein = new Scanner(System.in);
+		double x, log;
+		
+		System.out.print("Geben Sie ein double ein: ");
+		x = ein.nextDouble();
+		log = Math.log(x)/Math.log(2);
+		
+		System.out.println("Der 2erlog von " + x + " ist " + log + ".");
+	}
+}
