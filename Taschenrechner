@@ -1,0 +1,69 @@
+public static void main(String[] args) {
+		String y ;
+		double w, e, i;
+		Scanner ein = new Scanner(System.in);
+		System.out.print("Geben Sie einen der Rechenoperatoren +, -, *, /, ^ ein: ");
+		y = ein.next();
+		switch (y) {
+		case "7": {
+			System.out.println("GELBE RÜBEN?!");
+			break;
+		}	
+		case "+": {
+		Scanner zwei = new Scanner(System.in);
+		System.out.print("Geben Sie den ersten Summanden ein: ");
+		w = zwei.nextDouble();	
+		Scanner drei = new Scanner(System.in);
+		System.out.print("Geben Sie den zweiten Summanden ein: ");
+		e = drei.nextDouble();	
+		i = w + e;
+		System.out.println("Die Summe von " + w + " und " + e + " ist " + i);
+		break;
+		}
+		case "-": {
+		Scanner zwei = new Scanner(System.in);
+		System.out.print("Geben Sie den Minuenden ein: ");
+		w = zwei.nextDouble();	
+		Scanner drei = new Scanner(System.in);
+		System.out.print("Geben Sie den Subtrahenden ein: ");
+		e = drei.nextDouble();	
+		i = w - e;
+		System.out.println("Die Differenz von " + w + " und " + e + " ist " + i);
+		break;
+		}
+		case "*": {
+		Scanner zwei = new Scanner(System.in);
+		System.out.print("Geben Sie den ersten Faktor ein: ");
+		w = zwei.nextDouble();	
+		Scanner drei = new Scanner(System.in);
+		System.out.print("Geben Sie den zweiten Faktor ein: ");
+		e = drei.nextDouble();	
+		i = w * e;
+		System.out.println("Das Produkt von " + w + " und " + e + " ist " + i);
+		break;
+		}
+		case "/": {
+		Scanner zwei = new Scanner(System.in);
+		System.out.print("Geben Sie den Dividenden ein: ");
+		w = zwei.nextDouble();	
+		Scanner drei = new Scanner(System.in);
+		System.out.print("Geben Sie den Divisor ein: ");
+		e = drei.nextDouble();	
+		i = w / e;
+		System.out.println("Der Quotient von " + w + " und " + e + " ist " + i);
+		break;
+		}
+		case "^": {
+		Scanner zwei = new Scanner(System.in);
+		System.out.print("Geben Sie die Basis ein: ");
+		w = zwei.nextDouble();	
+		Scanner drei = new Scanner(System.in);
+		System.out.print("Geben Sie den Exponenten ein: ");
+		e = drei.nextDouble();	
+		i = Math.pow(w, e);
+		System.out.println("Die Potenz von " + w + " und " + e + " ist " + i);
+		break;
+		}
+		}
+	}
+}
