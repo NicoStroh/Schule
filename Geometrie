@@ -1,0 +1,242 @@
+public static void main (String[]args) {
+		String zd, ov, ua, kqd, kzqwp;
+		double g, h, a, b, c, r, um, fl;
+		Scanner eins = new Scanner(System.in);
+		System.out.println("2D oder 3D?");
+		zd = eins.next();
+		switch (zd) {
+		case "2D": {
+			Scanner zwei = new Scanner(System.in);
+			System.out.println("Umfang (U) oder Flächeninhalt (A)?");
+			ua = zwei.next();
+		switch (ua) {
+		case "U": {
+			Scanner drei = new Scanner(System.in);
+			System.out.println("Kreis, Quadrat, Rechteck oder Dreieck?");
+			kqd = drei.next();
+			switch (kqd) {
+			case "Kreis": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Radius in cm?");
+				r = vier.nextDouble();
+				um = 2*3.1415926535*r;
+				System.out.println("Der Kreis hat den Umfang " + um + "cm");
+				break;	
+			}
+			case "Quadrat": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Grundseite in cm?");
+				a = vier.nextDouble();
+				um = 4*a;
+				System.out.println("Das Quadrat hat den Umfang " + um + "cm");
+				break;	
+			}
+			case "Dreieck": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Ankathete in cm?");
+				a = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Gegenkathete in cm?");
+				b = fünf.nextDouble();
+				Scanner sechs = new Scanner(System.in);
+				System.out.println("Hypothenuse in cm?");
+				c = sechs.nextDouble();
+				um = a + b + c;
+				System.out.println("Das Dreieck hat den Umfang " + um + "cm");
+				break;
+			}
+			case "Rechteck": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Breite in cm?");
+				a = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Höhe in cm?");
+				b = fünf.nextDouble();
+				um = 2*a + 2*b;
+				System.out.println("Das Rechteck hat den Umfang " + um + "cm");
+				break;	
+			}
+			}
+			break;
+		}
+		case "A": {
+			Scanner drei = new Scanner(System.in);
+			System.out.println("Kreis, Quadrat, Rechteck oder Dreieck?");
+			kqd = drei.next();
+			switch (kqd) {
+			case "Kreis": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Radius in cm?");
+				r = vier.nextDouble();
+				fl = 3.1415926535*r*r;
+				System.out.println("Der Kreis hat den Flächeninhalt " + fl + "cm²");
+				break;
+			}
+			case "Quadrat": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Grundseite in cm?");
+				a = vier.nextDouble();
+				fl = a * a;
+				System.out.println("Das Quadrat hat den Flächeninhalt " + fl + "cm²");
+				break;
+			}
+			case "Dreieck": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Grundseite in cm?");
+				g = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Höhe in cm?");
+				h = fünf.nextDouble();
+				fl = 0.5 * g * h;
+				System.out.println("Das Dreieck hat den Flächeninhalt " + fl + "cm²");
+				break;
+			}
+			case "Rechteck": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Breite in cm?");
+				a = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Höhe in cm?");
+				b = fünf.nextDouble();
+				fl = a * b;
+				System.out.println("Das Rechteck hat den Flächeninhalt " + fl + "cm²");
+				break;	
+			}
+			}
+			break;
+		}
+		}
+			break;
+		}
+		case "3D": {
+		Scanner zwei = new Scanner(System.in);
+		System.out.println("Oberfläche (O) oder Volumen (V)?");
+		ov = zwei.next();
+		switch (ov) {
+		case "O": {
+			Scanner drei = new Scanner(System.in);
+			System.out.println("Kugel, Zylinder, Quader, Würfel oder Pyramide?");
+			kzqwp = drei.next();
+			switch (kzqwp) {
+			case "Kugel": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Radius in cm?");
+				r = vier.nextDouble();
+				fl = 4*3.1415926535*r*r;
+				System.out.println("Die Kugel hat die Oberfläche " + fl + "cm²");
+				break;
+			}
+			case "Zylinder": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Radius in cm?");
+				r = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Höhe in cm?");
+				h = fünf.nextDouble();
+				fl = 2*r*r*3.1415926535 + 2*3.141592653*r*h;
+				System.out.println("Der Zylinder hat die Oberfläche " + fl + "cm²");
+				break;
+			}
+			case "Quader": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Breite in cm?");
+				a = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Länge in cm?");
+				b = fünf.nextDouble();
+				Scanner sechs = new Scanner(System.in);
+				System.out.println("Tiefe in cm?");
+				c = sechs.nextDouble();
+				fl = 2*a*b + 2*a*c + 2*b*c;
+				System.out.println("Der Quader hat die Oberfläche " + fl + "cm²");
+				break;
+			}
+			case "Würfel": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Grundseite in cm?");
+				a = vier.nextDouble();
+				fl = 6*a*a;
+				System.out.println("Der Würfel hat die Oberfläche " + fl + "cm²");
+				break;
+			}
+			case "Pyramide": {
+				System.out.println("(Nur nicht-schiefe Pyramiden mit quadratischer Grundfläche)");
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Grundseite in cm?");
+				g = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Höhe in cm?");
+				h = fünf.nextDouble();
+				fl = g*g + 2*g*h;
+				System.out.println("Die Pyramide hat die Oberfläche " + fl + "cm²");
+				break;
+			}
+			}
+			break;
+		}
+		case "V": {
+			Scanner drei = new Scanner(System.in);
+			System.out.println("Kugel, Zylinder, Quader, Würfel oder Pyramide?");
+			kzqwp = drei.next();
+			switch (kzqwp) {
+			case "Kugel": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Radius in cm?");
+				r = vier.nextDouble();
+				fl = r*r*r*3.1415926535*(4/3);
+				System.out.println("Die Kugel hat das Volumen " + fl + "cm³");
+				break;
+			}
+			case "Zylinder": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Radius in cm?");
+				r = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Höhe in cm?");
+				h = fünf.nextDouble();
+				fl = r*r*3.1415926535*h;
+				System.out.println("Der Zylinder hat das Volumen " + fl + "cm³");
+				break;
+			}
+			case "Quader": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Breite in cm?");
+				a = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Länge in cm?");
+				b = fünf.nextDouble();
+				Scanner sechs = new Scanner(System.in);
+				System.out.println("Tiefe in cm?");
+				c = sechs.nextDouble();
+				fl = a*b*c;
+				System.out.println("Der Quader hat das Volumen " + fl + "cm³");
+				break;
+			}
+			case "Würfel": {
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Grundseite in cm?");
+				a = vier.nextDouble();
+				fl = a*a*a;
+				System.out.println("Der Würfel hat das Volumen " + fl + "cm³");
+				break;
+			}
+			case "Pyramide": {
+				System.out.println("(Nur nicht-schiefe Pyramiden mit quadratischer Grundfläche)");
+				Scanner vier = new Scanner(System.in);
+				System.out.println("Grundseite in cm?");
+				g = vier.nextDouble();
+				Scanner fünf = new Scanner(System.in);
+				System.out.println("Höhe in cm?");
+				h = fünf.nextDouble();
+				fl = (g*g*h)/3;
+				System.out.println("Die Pyramide hat das Volumen " + fl + "cm³");
+				break;
+			}
+			}
+			break;
+		}
+		}
+		}
+		}
+	}
+}
