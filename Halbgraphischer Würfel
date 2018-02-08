@@ -1,0 +1,51 @@
+	public static void main(String[] args) {
+		double ran = Math.random() * 6;
+		if (0 < ran) {
+			if (ran < 1.5) {
+				System.out.println(" _____");
+				System.out.println("|     |");
+				System.out.println("|  1  |");
+				System.out.println("|_____|");
+			}
+			if (1.5 < ran) {
+				if (ran < 2.5) {
+					System.out.println(" _____");
+					System.out.println("|     |");
+					System.out.println("|  2  |");
+					System.out.println("|_____|");
+				}
+			}
+			if (2.5 < ran) {
+				if (ran < 3.5) {
+					System.out.println(" _____");
+					System.out.println("|     |");
+					System.out.println("|  3  |");
+					System.out.println("|_____|");
+				}
+			}
+			if (3.5 < ran) {
+				if (ran < 4.5) {
+					System.out.println(" _____");
+					System.out.println("|     |");
+					System.out.println("|  4  |");
+					System.out.println("|_____|");
+				}
+			}
+			if (4.5 < ran) {
+				if (ran < 5.5) {
+					System.out.println(" _____");
+					System.out.println("|     |");
+					System.out.println("|  5  |");
+					System.out.println("|_____|");
+				}
+			}
+			if (5.5 < ran) {
+				System.out.println(" _____");
+				System.out.println("|     |");
+				System.out.println("|  6  |");
+				System.out.println("|_____|");
+			}
+		}
+	}
+
+}
