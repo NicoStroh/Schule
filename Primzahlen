@@ -11,12 +11,10 @@ public class Primzahlen {
 			boolean prim = true;
 			for (pteiler = 2; pteiler < p && prim; pteiler++) {
 				if (p%pteiler == 0) {
-					//keine Primzahl
 					prim = false;
 				}
 			}
 		if (prim){
-				//Primzahl
 				System.out.println(p + ", ");
 				}
 	}
