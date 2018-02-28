@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Hochzahlen {
+
+	public static void main(String[] args) {
+		Scanner ein = new Scanner(System.in);
+		System.out.println("Welche Zahl soll in eine Hochzahl umgerechnet werden?");
+		double zahl = ein.nextDouble();
+		int länge = 1;
+		double zahlv = zahl;
+		while(zahlv/10 > 10) {
+            länge++;
+            zahlv = zahlv/10;
+        }
+		länge = länge+1;
+        	double teiler = Math.pow(10, (länge-1));
+        	double zahlvv = zahl / teiler;
+        	 if (zahl < 10) {
+        		System.out.println("Wieso sollte man " + zahl + " in eine Hochzahl umwandeln?");
+        	}
+        	else if (zahl < 100){
+        	double m = zahl/10;
+        	System.out.println("Als Hochzahl ist die Zahl " + m + " * 10².");
+        	}
+        	else {
+        		System.out.println("Als Hochzahl ist die Zahl " + zahlvv + " * 10^" + länge + ".");
+        	}
+	}
+}
