@@ -6,6 +6,12 @@ public class Quersumme {
 		Scanner ein = new Scanner(System.in);
 		System.out.println("Von welcher Zahl soll die Quersumme berechnet werden?");
 		int zahl = ein.nextInt();
+		int zahld = zahl;
+		boolean zweite = true;
+		boolean apfel = true;
+		boolean vierte = true;
+		for (int io = 0; zweite; io++) {
+		boolean dritte = true;
 		int zahlz = zahl;
 		int länge = 1;
 		double zahlv = zahl;
@@ -28,6 +34,26 @@ public class Quersumme {
 				quersumme = quersumme + summand[j];
 			}	
 	}
-		System.out.println("Die Quersumme von " + zahl + " ist " + quersumme + ".");
+		if (quersumme < 10 && vierte) {
+			System.out.println("Die Quersumme von " + zahl + " ist " + quersumme + ".");
+		zweite = false;
+		apfel = false;
+		dritte = false;
+		vierte = false;
+		}
+		else if (vierte){
+			System.out.println("Die Quersumme von " + zahl + " ist " + quersumme + ".");
+			zahl = quersumme;
+			dritte = false;
+			vierte = false;
+		}
+		if (dritte) {
+				System.out.println("Die zweite Quersumme von " + zahld + " ist " + quersumme + ".");
+				zweite = false;
+				apfel = false;
+				dritte = false;
+				vierte = false;
+			}
+		}
 	}
 }
