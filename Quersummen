@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Quersumme {
+
+	public static void main(String[] args) {
+		Scanner ein = new Scanner(System.in);
+		System.out.println("Von welcher Zahl soll die Quersumme berechnet werden?");
+		int zahl = ein.nextInt();
+		int zahlz = zahl;
+		int länge = 1;
+		double zahlv = zahl;
+		while(zahlv/10 > 1) {
+            länge++;
+            zahlv = zahlv/10;
+        }
+		int quersumme = 0, u = 0, i= 1, teiler = 1;
+		for (i = 1; i < länge; i++) {
+			teiler = teiler * 10;
+		}
+		int j;
+		for (j = 0; teiler >= 1; j++) {
+			int quersu = zahlz / teiler;
+			zahlz = zahl%teiler;
+			teiler = teiler / 10;
+			int[] summand = new int[länge];
+			summand[j] = quersu;
+			for (int zwe = 0; u<=j; u++) {
+				quersumme = quersumme + summand[j];
+			}	
+	}
+		System.out.println("Die Quersumme von " + zahl + " ist " + quersumme + ".");
+	}
+}
