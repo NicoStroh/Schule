@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Temperatur {
+
+	public static void main(String[] args) {
+		double kelvin;
+		double celsius;
+		double fahrenheit;
+		double tempz;
+		String temp;
+		Scanner sca = new Scanner(System.in);
+		System.out.println("Geben Sie bitte die Temperatur ein (z.B.: 18°C)");
+		String wort = sca.nextLine();
+		String einheit = wort.trim().replaceAll(" ", "").replaceAll("1", "").replaceAll("2", "").replaceAll("3", "").replaceAll("4", "").replaceAll("5", "").replaceAll("6", "");
+		einheit = einheit.replaceAll("7", "").replaceAll("8", "").replaceAll("9", "").replaceAll("0", "").replaceAll("°", "");
+		switch (einheit) {
+		case "F": {
+			temp = wort.toLowerCase().replaceAll("f", "").replaceAll("°", "").trim();
+			tempz = Double.valueOf(temp);
+			System.out.println(tempz);
+			celsius = tempz - 32 * 5/9 ;
+			System.out.println("Die Temperatur in Celsius ist " + celsius + "°C.");
+			kelvin = celsius + 273;
+			System.out.println("Die Temperatur in Fahrenheit ist " + kelvin + "K.");
+			break;
+		}
+		case "C": {
+			temp = wort.toLowerCase().replaceAll("c", "").replaceAll("°", "").trim();
+			tempz = Double.valueOf(temp);
+			System.out.println(tempz);
+			kelvin = tempz + 273;
+			System.out.println("Die Temperatur in Kelvin ist " + kelvin + "K.");
+			fahrenheit = tempz * 1.8 + 32;
+			System.out.println("Die Temperatur in Fahrenheit ist " + fahrenheit + "°F.");
+			break;
+		}
+		case "K": {
+			temp = wort.toLowerCase().replaceAll("k", "").replaceAll("°", "").trim();
+			tempz = Double.valueOf(temp);
+			System.out.println(tempz);
+			celsius = tempz - 273;
+			System.out.println("Die Temperatur in Celsius ist " + celsius + "°C.");
+			fahrenheit = celsius * 1.8 + 32;
+			System.out.println("Die Temperatur in Fahrenheit ist " + fahrenheit + "°F.");
+			break;
+		}
+		default: {
+			System.out.println(einheit + " ist keine passende Einheit.");
+			break;
+		}
+		}
+			
+	}
+
+}
