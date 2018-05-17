@@ -1,10 +1,39 @@
-import java.util.Scanner;
-public class Primzahlen {public static void main(String[] args) {int zahl, p, pteiler;
+public static void main(String[] args)
+	{
+		int zahl, p, pteiler;
+		
 		Scanner ein = new Scanner(System.in);
+		
 		System.out.println("Geben sie die Zahl, bis der alle Primzahlen berechnet werden sollen, ein: ");
 		zahl = ein.nextInt();
-		for (p = 2; p <= zahl; p++) {boolean prim = true;
-			for (pteiler = 2; pteiler < p && prim; pteiler++) {if (p%pteiler == 0) {prim = false;}}
-		if (prim){System.out.println(p + ", ");}}
-		if (zahl > 1) {System.out.println("sind Primzahlen.");}
-		if (zahl <= 1){System.out.println("In diesem Bereich gibt es keine Primzahlen.");}}}
+		
+		for (p = 2; p <= zahl; p++)
+		{
+			boolean prim = true;
+			
+				for (pteiler = 2; pteiler < p && prim; pteiler++)
+				{
+					if (p%pteiler == 0)
+					{
+						prim = false;
+					}
+				}
+				
+				if (prim)
+				{
+					System.out.println(p + "; ");
+				}
+		
+		}
+		
+		if (zahl > 1)
+		{
+			System.out.print("sind Primzahlen.");
+		}
+		
+		if (zahl <= 1)
+		{
+			System.out.println("In diesem Bereich gibt es keine Primzahlen.");
+		}
+		
+	}
